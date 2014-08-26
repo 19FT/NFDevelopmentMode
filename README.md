@@ -1,5 +1,8 @@
 #NFDevelopmentMode
 
+**UPDATE: There is now an offical version of this module at  
+https://github.com/zfcampus/zf-development-mode**
+
 This ZF2 development mode module is an extraction of the Apigility Skeleton's Development Mode Controller to its own module for use in ZF2 applications.
 
 ##Installation with Composer
