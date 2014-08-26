@@ -46,6 +46,27 @@ class Module
     }
     
     /**
+     * Display a console banner, if development mode is active
+     * 
+     * @return string
+     */
+    public function getConsoleBanner(Console $console)
+    {
+        if (file_exists('config/development.config.php')) {
+            $string = '';
+            
+            $text = '* Development mode enabled';
+            $spaces = $console->getWidth() - strlen($text) - 1;
+            
+            $return = str_repeat('*', $console->getWidth());
+            $return .= strtoupper($text) . str_repeat(' ', $spaces) . '*';
+            $return .= str_repeat('*', $console->getWidth());
+            
+            return $return;
+        }
+    }
+    
+    /**
      * Return the console usage for this module
      *
      * @param Console $console            
